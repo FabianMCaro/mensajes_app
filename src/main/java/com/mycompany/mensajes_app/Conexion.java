@@ -18,7 +18,7 @@ public class Conexion {
     public Connection get_connection(){
         Connection conection = null;
         try{
-            conection = DriverManager.getConnection("jdbc:mysql://localhost:3308/mensajes_app","root","");
+            conection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mensajes_app?serverTimezone=UTC","root","toor");
             
         }catch(SQLException e){
             System.out.println(e);

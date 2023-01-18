@@ -21,7 +21,7 @@ public class MensajesDAO {
         try(Connection conexion = db_connect.get_connection())  {
             PreparedStatement  ps=null;
             try{
-                String query="INSERT INTO mensajes ( mensaje, autor_mensaje) VALUES (?,?)";
+                String query="insert into mensajes(mensaje,autor_mensaje,fecha_mensaje) values (?,?,CURRENT_TIMESTAMP)";
                 ps=conexion.prepareStatement(query);
                 ps.setString(1, mensaje.getMensaje());
                 ps.setString(2, mensaje.getAutor_mensaje());
