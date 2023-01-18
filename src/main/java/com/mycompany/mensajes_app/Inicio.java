@@ -18,6 +18,8 @@ public class Inicio {
         
         Scanner sc = new Scanner(System.in);
         
+        
+       
         int opcion = 0;
         
         do{
@@ -49,7 +51,6 @@ public class Inicio {
             }
             
         }while(opcion != 5);
-        
         
     }
 }
